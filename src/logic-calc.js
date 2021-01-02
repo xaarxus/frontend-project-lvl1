@@ -3,16 +3,17 @@ import {
   getAnswer,
   getRandomNumber,
   checkAnswer,
+  randomOperation,
 } from './index.js';
 
 export default () => {
   const name = greeting();
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
-    const number = getRandomNumber();
-    const rightAnswer = number % 2 ? 'no' : 'yes';
-    console.log(`Question: ${number}`);
+    const number1 = getRandomNumber();
+    const number2 = getRandomNumber();
+    const rightAnswer = randomOperation(number1, number2);
     const userAnswer = getAnswer();
     if (!checkAnswer([rightAnswer, userAnswer], name)) {
       return;
