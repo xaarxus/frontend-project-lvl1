@@ -21,19 +21,6 @@ const checkAnswer = (answers, name) => {
   return true;
 };
 
-const randomOperation = (num1, num2) => {
-  const randomIndex = Math.floor(Math.random() * 3);
-  const operator = ['+', '-', '*'][randomIndex];
-  console.log(`Question: ${num1} ${operator} ${num2}`);
-  if (operator === '+') {
-    return num1 + num2;
-  }
-  if (operator === '-') {
-    return num1 - num2;
-  }
-  return num1 * num2;
-};
-
 const greeting = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
@@ -46,5 +33,4 @@ export {
   getAnswer,
   getRandomNumber,
   checkAnswer,
-  randomOperation,
 };
