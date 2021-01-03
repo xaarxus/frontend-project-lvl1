@@ -10,7 +10,7 @@ export default () => {
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
-    const number = getRandomNumber();
+    const number = getRandomNumber(100);
     const rightAnswer = number % 2 ? 'no' : 'yes';
     console.log(`Question: ${number}`);
     const userAnswer = getAnswer();

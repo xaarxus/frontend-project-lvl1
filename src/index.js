@@ -5,8 +5,8 @@ const getAnswer = () => {
   return answer;
 };
 
-const getRandomNumber = () => {
-  const number = Math.ceil(Math.random() * 100);
+const getRandomNumber = (n) => {
+  const number = Math.ceil(Math.random() * n);
   return number;
 };
 

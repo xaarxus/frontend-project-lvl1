@@ -11,8 +11,8 @@ export default () => {
 
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
-    const number1 = getRandomNumber();
-    const number2 = getRandomNumber();
+    const number1 = getRandomNumber(100);
+    const number2 = getRandomNumber(100);
     const rightAnswer = randomOperation(number1, number2);
     const userAnswer = getAnswer();
     if (!checkAnswer([rightAnswer, userAnswer], name)) {

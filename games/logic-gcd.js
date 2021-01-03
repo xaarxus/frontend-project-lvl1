@@ -20,8 +20,8 @@ export default () => {
 
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
-    const number1 = getRandomNumber();
-    const number2 = getRandomNumber();
+    const number1 = getRandomNumber(100);
+    const number2 = getRandomNumber(100);
     console.log(`Question: ${number1} ${number2}`);
     const userAnswer = getAnswer();
     const rightAnswer = findRigthAnswer(number1, number2);
